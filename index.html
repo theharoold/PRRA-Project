@@ -1,336 +1,391 @@
 <!doctype html>
 <html>
 <head>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 <title>
-Kurs: Praktikum iz računarskih aplikacija
+
 </title>
-<link rel="icon" href="mico.png">
 <style>
 html
 {
-height:100%;
-width:100%;
+height:1400px;
 }
 body
 {
-background-color:#DDDEE3;
 height:100%;
-width:98%;
-font-family:Arial;
 }
-#header1
+body
 {
-background-color:black;
+background-image: radial-gradient(#6E409E,#9E4064,#9E6240);
+}
+
+header
+{
 top:0;
 left:0;
-right:0;
 position:fixed;
 width:100%;
-height:45px;
-}
-#diveucenje
-{
-margin-left:110px;
-}
-#divsajtftnca
-{
-margin-left:240px;
-}
-#EUCENJE
-{
-float:left;
+height:70px;
+background-color:white;
 
-color:gray;
-margin-top:8px;
-font-size:22px;
-text-decoration:none;
+border-bottom:1px solid white;
 }
-#EUCENJE:hover
+.dark-mode
 {
-color:white;
-}
-#SajtFTNCa
-{
-float:left;
+background-color:black;
 
+}
+#hlogotp
+{
+
+height:50px;
+}
+#picdiv
+{
+margin-top:10px;
+margin-left:100px;
+border-radius:50%;
+background-color:white;
+width:50px;
+height:50px;
+float:left;
 color:gray;
-margin-top:12px;
-font-size:14px;
-text-decoration:none;
+
 }
-#SajtFTNCa:hover
+
+#homebuttonico
 {
-color:white;
-}
-#divzvono
-{
+background-color:white;
+width:50px;
+height:50px;
 float:right;
-width: 16px;
-height: 15px;
-margin-right:30px;
+border-radius:50%;
+margin-right:10px;
+margin-top:10px;
+}
+#homebuttonicopic
+{
+
+height:50px;
+opacity:1.0;
+
+}
+#homebuttonicopic:hover
+{
+opacity:0.7;
+}
+#homebuttonico:hover
+{
+opacity:0.7;
+}
+#menubuttonico
+{
+width:50px;
+height:50px;
+float:right;
+margin-right:10px;
+margin-top:10px;
+background-color:white;
+border-radius:50%;
+}
+#menubuttonicopic
+{
+height:50px;
+}
+
+#menubuttonico {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  top:50px;
+}
+.dropdown-content .menua {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content .menua:hover {background-color: #ddd;}
+#menubuttonico:hover .dropdown-content {display: block;}
+#menubuttonico:hover  {opacity:0.7;}
+.menua
+{
+font-family: 'Oswald', sans-serif;
+}
+#lightbulb
+{
+
+width:50px;
+height:50px;
+float:right;
+border-radius:50%;
+margin-right:50px;
+margin-top:10px;
+}
+#lightbulbbutton
+{
+height:50px;
+width:50px;
+border-radius:50%;
+background:url(lightbulbico45px.png) no-repeat;
+background-color:white;
+cursor:pointer;
+}
+#vlheader
+{
+font-family: 'Oswald', sans-serif;
+color:white;
+float:left;
+margin-left:20px;
 margin-top:15px;
+font-size:1.5em;
+cursor:default;
 }
-#divcet
+#centraldiv
 {
-float:right;
-width: 15px;
-height: 15px;
-margin-right:30px;
-margin-top:15px;
-}
-#zvono
-{
-float:right;
-width: 16px;
-height: 15px;
-}
-#cet
-{
-float:right;
-width: 15px;
-height: 15px;
-}
-#divmojeime
-{
-color:gray;
-font-size: 15px;
-float:right;
-margin-top:11px;
-padding-right:15px;
-}
-#downtriangle
-{
-float:right;
-color:white;
-font-size:10px;
-margin-left:10px;
-padding-top:15px;
-margin-right:100px;
-}
-#divmojeime:hover
-{
-color:white;
-}
-#slikamene
-{
-float:right;
-margin-top:4px;
-}
-#everythingbody
-{
+width:80%;
+height:1200px;
+margin-top:100px;
+margin-left:10%;
 float:left;
-margin-top:70px;
-margin-left:105px;
 }
-#mojikursevi
+#centraldiv-content
 {
-padding-top:10px;
-padding-left:20px;
-font-size:14px;
-height:30px;
-width:280px;
-background-color:white;
+background-color:black;
+height:1200px;
+width:65%;
+float:left;
+border-radius:20px;
+border-color:rgb(129,130,131);
+border-style:solid;
+border-width:2px;
+box-shadow:5px 10px 25px;
+}
+#centraldiv-content:hover
+{
+border-color:white;
+}
+#footerbottom
+{
+width:20%;
+height:50px;
+background-color:black;
+position:fixed;
+bottom:0;
+margin-left:40%;
+margin-right:auto;
 border-radius:5px;
+border-top:1px solid white;
+border-right:1px solid white;
+border-left:1px solid white;
+overflow:hidden;
 }
-.righttriangle
+#footerbottomp
 {
-color:#CCCCCC;
+color:white;
+font-size:100%;
+position:relative;
+font-family:'Oswald', sans-serif;
+float:left;
+margin-left:100px;
+white-space: pre-line;
+cursor:default;
 }
-.pocstr
+#footerbottompx
 {
-color:#B2003B;
+float:right;
+font-size:2em;
+font-family:'Oswald', sans-serif;
+color:white;
+margin-left:20px;
+margin-top:-1px;
+position:fixed;
+cursor: pointer;
+}
+#centraldiv-widget1
+{
+width:30%;
+float:right;
+height:300px;
+background-color:black;
+border-radius:20px;
+border-color:rgb(129,130,131);
+border-style:solid;
+border-width:2px;
+overflow:hidden;
+box-shadow:5px 10px 25px;
+}
+.widget1a
+{
 text-decoration:none;
+font-weight:bold;
+color:white;
+font-family:'Oswald',sans-serif;
+font-size:1.4em;
 }
-.pocstr:hover
-{
-text-decoration:underline;
-}
-#Navigacija
-{
-display: inline-block;
-height:650px;
-width:400px;
-margin-top:20px;
-background-color:white;
-border-radius:5px;
-line-height:0.8;
-}
-.NavText
-{
-padding-top:2px;
-padding-left:20px;
-color:rgb(165,153,153);
-}
-.navbar
-{
-line-height:1.6;
-padding-left:20px;
-font-size:14px;
-color:#B2003B;
-}
-.block
-{
-color:rgb(153,153,153);
-}
-#PRRA
-{
-color:rgb(178,0,59);
-}
-.bedzevi
-{
-height:15px;
-width:15px;
-float:left;
-margin-top:2px;
-margin-left:24px;
-}
-#Admin
-{
-margin-top:20px;
-height:100px;
-width:400px;
-background-color:white;
-border-radius:5px;
-line-height:0.8;
-}
-#AdminText
-{
-padding-top:15px;
-padding-left:20px;
-color:rgb(165,153,153);
-}
-#centar
-{
-top:0;
-}
-#centardivbelo
-{
-
-display: inline-block;
-margin-left:-95px;
-margin-top:210px;
-height:1600px;
-width:43%;
-background-color:white;
-float:left;
-border-radius:5px;
-}
-#notif
+#widget1links
 {
 padding-top:30px;
-padding-left:60px;
-color:#B2003B;
-font-size:15px;
+padding-left:50px;
+float:left;
+
 }
-#lista
+#fbicopic
 {
-margin-left:70px;
-font-size:14px;
-line-height:1.5;
-margin-top:-15px;
+height:20px;
+width:20px;
 }
-.pdf
+#igicopic
 {
-padding-left:60px;
-line-height:2.0;
+height:20px;
+width:20px;
 }
-.uvodnicastext
+#yticopic
 {
+height:20px;
+width:20px;
+}
+#sticopic
+{
+height:20px;
+width:20px;
+}
+#widget1explanation
+{
+float:right;
 text-decoration:none;
-color:#B2003B;
+font-weight:bold;
+color:white;
+font-family:'Oswald',sans-serif;
+font-size:1.4em;
+padding-top:20px;
+line-height:2.2;
+margin-right:20px;
+cursor:default;
 }
-.uvodnicastext:hover
-{
-text-decoration:underline;
-}
-.hrcenter
-{
-border-bottom-width: 1px;
-border-bottom-style: solid;
-border-bottom-color: #ededed55;
-margin-left:30px;
-margin-right:30px;
-}
-.programi
-{
-margin-left:40px;
-font-size:24px;
-}
-
 </style>
+<script>
+let i=0;
+function myFunction() {
+  let element = document.getElementById("myHeader");
+  element.classList.toggle("dark-mode");
+  element = document.getElementById("vlheader");
 
+  i=i+1;
+  if (i%2===0){
+  document.getElementById("vlheader").style.color="white";
+  document.getElementById("picdiv").style.backgroundColor="white";
+  document.getElementById("myHeader").style.borderBottom="1px solid white";
+  document.getElementById("menubuttonico").style.backgroundColor="white";
+  document.getElementById("homebuttonico").style.backgroundColor="white";
+  document.getElementById("lightbulbbutton").style.backgroundColor="white";
+  document.getElementById("centraldiv-content").style.backgroundColor="black";
+  document.getElementById("footerbottom").style.backgroundColor="black";
+  document.getElementById("footerbottomp").style.color="white";
+  document.getElementById("footerbottompx").style.color="white";
+  document.getElementById("footerbottom").style.borderTop="1px solid white";
+  document.getElementById("footerbottom").style.borderLeft="1px solid white";
+  document.getElementById("footerbottom").style.borderRight="1px solid white";
+  document.getElementById("centraldiv-widget1").style.backgroundColor="black";
+  document.getElementById("fb1").style.color="white";
+  document.getElementById("ig1").style.color="white";
+  document.getElementById("yt1").style.color="white";
+  document.getElementById("st1").style.color="white";
+  document.getElementById("widget1explanation").style.color="white";
+  }
+  else {document.getElementById("vlheader").style.color="black";
+  document.getElementById("picdiv").style.backgroundColor="black";
+  document.getElementById("myHeader").style.borderBottom="1px solid black";
+  document.getElementById("menubuttonico").style.backgroundColor="black";
+  document.getElementById("homebuttonico").style.backgroundColor="black";
+  document.getElementById("lightbulbbutton").style.backgroundColor="black";
+  document.getElementById("centraldiv-content").style.backgroundColor="white";
+  document.getElementById("footerbottom").style.backgroundColor="white";
+  document.getElementById("footerbottomp").style.color="black";
+  document.getElementById("footerbottompx").style.color="black";
+  document.getElementById("footerbottom").style.borderTop="1px solid black";
+  document.getElementById("footerbottom").style.borderLeft="1px solid black";
+  document.getElementById("footerbottom").style.borderRight="1px solid black";
+  document.getElementById("centraldiv-widget1").style.backgroundColor="white";
+  document.getElementById("fb1").style.color="black";
+  document.getElementById("ig1").style.color="black";
+  document.getElementById("yt1").style.color="black";
+  document.getElementById("st1").style.color="black";
+  document.getElementById("widget1explanation").style.color="black";
+  }
+ 
+}
+ function myFunction1() {
+  if (i%2===0)
+	{
+	document.getElementById("centraldiv-content").style.border="2px solid white";
+	}
+  else {document.getElementById("centraldiv-content").style.border="2px solid black";
+  }
+    }
+  function myFunction2() {
+  document.getElementById("centraldiv-content").style.border="2px solid rgb(129,130,131)";
+  }
+  function myFunction3() {
+  document.getElementById("footerbottom").style.display="none";
+  }
+  function myFunction4() {
+  if (i%2===0)
+	{
+	document.getElementById("centraldiv-widget1").style.border="2px solid white";
+	}
+  else {document.getElementById("centraldiv-widget1").style.border="2px solid black";
+  }
+    }
+  function myFunction5() {
+  document.getElementById("centraldiv-widget1").style.border="2px solid rgb(129,130,131)";
+  }
+</script>
 </head>
 <body>
-<header id="header1">
-<div id="diveucenje"><a href="https://eucenje.ftn.kg.ac.rs/" id="EUCENJE" target="-blank">EUČENJE</a></div>
-<div id="divsajtftnca"><a href="http://ftn.kg.ac.rs/" tagret="-blank" id="SajtFTNCa">Sajt FTN Čačak</a></div>
-<div id="downtriangle">&#9660;</div>
-<img id="slikamene" src="ja.jpg"> 
-<div id="divmojeime">Veljko Lončarević</div>
-
-
-<div id="divcet"><img id="cet" src="cet.png"></div>
-<div id="divzvono"><img id="zvono" src="zvono.png"></div>
-
-</header>
-
-<div id="everythingbody">
-<h1>Praktikum iz računarskih aplikacija</h1>
-<div id="mojikursevi"><a href="mainpage.html" class="pocstr">Početna stranica </a><a class="righttriangle">&#9654;</a> Moji kursevi <a class="righttriangle">&#9654;</a> <a href=""class="pocstr">PRRA</a></div>
-<div id="Navigacija"><p class="NavText"><b>NAVIGACIJA</b></p>
-<p class="navbar">Početna strana<br><span class="block">&#9632;</span> Kontrolni panel<br><span class="block">&#9654;</span> Stranice sajta<br><span class="block">&#9660;</span> Moji kursevi
-<br>&emsp;<span class="block">&#9654;</span> INTEH<br>&emsp;<span class="block">&#9654;</span> PRPR<br>&emsp;<span class="block">&#9660;</span> <span id="PRRA"><b>PRRA</b></span><br>&emsp;&emsp;<span class="block">&#9654;</span> Učesnici
-<br>&nbsp;<img class="bedzevi" src="trofej.png">Bedževi
-<br>&nbsp;<img class="bedzevi" src="triangle.png">Kompetencije
-<br>&nbsp;<img class="bedzevi" src="calendar.png">Ocene
-<br>&emsp;&emsp;<span class="block">&#9654;</span> Opšta sekcija
-<br>&emsp;&emsp;<span class="block">&#9654;</span> ПРОГРАМИ
-<br>&emsp;&emsp;<span class="block">&#9654;</span> КОЛОКВИЈУМ 1 - HTML
-<br>&emsp;&emsp;<span class="block">&#9654;</span> ПРОЈЕКАТ 1 - Protopage, Mindomo, Visio
-<br>&emsp;&emsp;<span class="block">&#9654;</span> ПРОЈЕКАТ 2 - први део (видео туториј..
-<br>&emsp;&emsp;<span class="block">&#9654;</span> ПРОЈЕКАТ 2 - други део (GIMP, PREZI)
-<br>&emsp;&emsp;<span class="block">&#9654;</span> КОЛОКВИЈУМ 2 - Матлаб
-<br>&emsp;<span class="block">&#9654;</span> PJIT
-<br>&emsp;<span class="block">&#9654;</span> UUPROG
-<br>&emsp;<span class="block">&#9654;</span> MAT2
-<br>&emsp;<span class="block">&#9654;</span> STIT
-<br>&emsp;<span class="block">&#9654;</span> ENG1
-<br>&emsp;<span class="block">&#9654;</span> ENG2
-<br>&emsp;<span class="block">&#9654;</span> ISIS
-<br>&emsp;<span class="block">&#9654;</span> ORT2020
-<br>&emsp;<span class="block">&#9632;</span> Više..
-
-</p>
-
+<section>
+	<header id="myHeader" class="dark-mode">
+		<div id="picdiv" ><img id="hlogotp" src="hlogotp.png"></div><div id="vlheader" class="Veljkoclass">Veljko Lončarević</div>
+		<div id="lightbulb"><button onclick="myFunction()" id="lightbulbbutton"></button></div>
+		<div id="menubuttonico"><img id="menubuttonicopic"src="menubuttonico.png">
+			<div class="dropdown-content">
+				<a class="menua"href="#">Link 1</a>
+				<a class="menua"href="mainpage.html">PRRA</a>
+				<a class="menua"href="https://theharoold.github.io/website-projects/" target="-blank">Drugi rad</a>
+			</div>
+		</div>
+		<div id="homebuttonico"><a href="mainpage.html"><img id="homebuttonicopic"src="homebuttonico.png"></a></div>
+		
+	</header>
+</section>
+<div id="centraldiv">
+	<div id="centraldiv-content" onmouseenter="myFunction1()" onmouseleave="myFunction2()">
+	
+	</div>
+	<div id="centraldiv-widget1" onmouseenter="myFunction4()" onmouseleave="myFunction5()">
+		<p id="widget1links">
+			<a id="fb1"class="widget1a"href="https://www.facebook.com/veltipoweron" target="-blank"><img src="fbico.png" id="fbicopic">&ensp;Facebook</a><br><br>
+			<a id="ig1"class="widget1a"href="https://www.instagram.com/v_loncarr/" target="-blank"><img src="igico.png" id="igicopic">&ensp;Instagram</a><br><br>
+			<a id="yt1"class="widget1a"href="https://www.youtube.com/channel/UCOtuOv4M91Gupv83kmsu_jA?" target="-blank"><img src="ytico.png" id="yticopic">&ensp;Youtube</a><br><br>
+			<a id="st1"class="widget1a"href="https://steamcommunity.com/id/velti/" target="-blank"><img src="stico.png" id="sticopic">&ensp;Steam</a>
+		</p>
+		<p id="widget1explanation">
+			Вељко Лончаревић<br>
+			v_loncarr <br>
+			Veljko Lončarević<br>
+			Tycho
+		</p>
+	</div>
 </div>
-<div id="Admin">
-<p id="AdminText"><b>ADMINISTRACIJA</b></p>
-<p class="navbar">&emsp;<span class="block">&#9660;</span> Administracija kursa
-<br>&nbsp;<img class="bedzevi" src="admn.png">Ispiši me sa kursa PRRA
-
-</p>
-</div>
-</div>
-
-<div id="centar">
-<div id="centardivbelo">
-<div id="notif"><p><img src="notfico.svg"> <span id="notficotext">Obaveštenja </span></p></div>
-<div id="yt"><p style="text-align:center;"> <img src="ytlogo.png"><br><ul id="lista"><li>У видео снимцима ваших пројеката можете да користите музику и звучне ефекте у позадини.</li>
-<li>Немојте узимати било коју песму са интернета због ауторских права.</li>
-<li>Постоје сајтови са којих можете преузети бесплатне музичке нумере и музичке ефекте.</li>
-<li>Препоручујемо вам да користите бесплатну YouTube фонотеку</li></ul></p></div>
-<div class="pdf"><p><img src="pdfico.png"> <a href="https://eucenje.ftn.kg.ac.rs/mod/resource/view.php?id=7412" target="-blank" class="uvodnicastext">Уводни час </a><br>
-<img src="excelico.png"> <a href="https://eucenje.ftn.kg.ac.rs/mod/resource/view.php?id=12166" target="-blank" class="uvodnicastext">Евиденција ПРРА 2019-20 </a></p><br></div>
-<hr class="hrcenter">
-
-<p><h3 class="programi">ПРОГРАМИ</h3></p>
-<div class="pdf"><p><img src="vscico.svg"> <a href="https://eucenje.ftn.kg.ac.rs/mod/url/view.php?id=7400" target="-blank" class="uvodnicastext">Visual Studio Code </a><br></p></div>
-<br>
-<hr class="hrcenter">
-<p><h3 class="programi">КОЛОКВИЈУМ 1 - HTML</h3></p>
-</div>
-<br>
-
-</div>
+<footer id="footerbottom">
+<p id="footerbottomp">Veljko Lončarević | 2020 &copy </p><p onclick="myFunction3()" id="footerbottompx">x</p>
+</footer>
 </body>
 </html>
