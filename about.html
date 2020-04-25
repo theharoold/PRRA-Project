@@ -8,13 +8,12 @@
 Veljko Lončarević
 </title>
 <style>
-html
-{
-height:1400px;
-}
-body
-{
-height:100%;
+html, body {
+	scroll-behavior: smooth;
+    margin: 0;
+    height:100%;
+    width:100%;
+    padding:0;
 }
 body
 {
@@ -23,6 +22,7 @@ background-image: radial-gradient(#6E409E,#9E4064,#9E6240);
 
 header
 {
+z-index:2;
 top:0;
 left:0;
 position:fixed;
@@ -150,30 +150,7 @@ margin-top:15px;
 font-size:1.5em;
 cursor:default;
 }
-#centraldiv
-{
-width:80%;
-height:1200px;
-margin-top:100px;
-margin-left:10%;
-float:left;
-}
-#centraldiv-content
-{
-background-color:black;
-height:1200px;
-width:65%;
-float:left;
-border-radius:20px;
-border-color:rgb(129,130,131);
-border-style:solid;
-border-width:2px;
-box-shadow:5px 10px 25px;
-}
-#centraldiv-content:hover
-{
-border-color:white;
-}
+
 #footerbottom
 {
 width:400px;
@@ -212,103 +189,143 @@ margin-top:-1px;
 position:fixed;
 cursor: pointer;
 }
-#centraldiv-widget1
+#section1
 {
-width:30%;
-float:right;
-height:300px;
-background-color:black;
-border-radius:20px;
-border-color:rgb(129,130,131);
-border-style:solid;
-border-width:2px;
-overflow:hidden;
-box-shadow:5px 10px 25px;
-}
-.widget1a
-{
-text-decoration:none;
-font-weight:bold;
+width:100%;
+height:100%;
+
 color:white;
-font-family:'Oswald',sans-serif;
-font-size:1.4em;
 }
-#widget1links
+#section2
 {
-padding-top:30px;
-padding-left:50px;
-float:left;
+width:100%;
+height:100%;
+background-image:url('crkva3.jpg');
+background-color:black;
+color:white;
+background-repeat:no-repeat;
 
 }
-#fbicopic
+#divtransition
 {
-height:20px;
-width:20px;
-}
-#igicopic
-{
-height:20px;
-width:20px;
-}
-#yticopic
-{
-height:20px;
-width:20px;
-}
-#sticopic
-{
-height:20px;
-width:20px;
-}
-#widget1explanation
-{
-float:right;
-text-decoration:none;
-font-weight:bold;
 color:white;
 font-family:'Oswald',sans-serif;
-font-size:1.4em;
-padding-top:20px;
-line-height:2.2;
-margin-right:20px;
-cursor:default;
+font-size:2em;
+margin-left:auto;
+margin-right:auto;
+padding-top:20%;
+height:30px;
+width:300px;
 }
-#centraldiv-widget2
+#saznajvise
+{
+padding:15px 15px 15px 15px;
+background-color:black;
+text-align:center;
+border-radius:10px;
+border:2px solid rgb(129,130,131);
+cursor:pointer;
+box-shadow:5px 10px 25px black;
+}
+#saznajviseA
+{
+color:white;
+text-decoration:none;
+
+}
+#section3
+{
+width:100%;
+height:100%;
+background-color:white;
+color:white;
+}
+#omenitxt
+{
+color:white;
+font-family:'Oswald',sans-serif;
+font-size:2em;
+float:right;
+padding-right:100px;
+padding-top:100px;
+line-height:2;
+}
+#section2transition
+{
+padding:15px 40px 15px 40px;
+background-color:white;
+text-align:center;
+border-radius:10px;
+border:2px solid rgb(129,130,131);
+cursor:pointer;
+float:right;
+margin-right:-500px;
+margin-top:400px;
+font-family:'Oswald',sans-serif;
+text-decoration:none;
+color:black;
+font-size:2em;
+box-shadow:5px 10px 25px white;
+}
+.section3table
+{
+width:100%;
+height:50%;
+}
+#svetisavapic
+{
+height:200px;
+border-radius:50%;
+border:2px solid rgb(129,130,131);
+}
+#gimnazijapic
+{
+height:200px;
+border-radius:50%;
+border:2px solid rgb(129,130,131);
+}
+#svetisavatxt
+{
+font-family:'Oswald',sans-serif;
+font-size:2em;
+color:black;
+
+}
+#gimnazijatxt
+{
+font-family:'Oswald',sans-serif;
+font-size:2em;
+color:black;
+text-align:right;
+}
+#tr1td1
 {
 width:30%;
-float:right;
-height:300px;
-background-color:black;
-border-radius:20px;
-border-color:rgb(129,130,131);
-border-style:solid;
-border-width:2px;
-overflow:hidden;
-box-shadow:5px 10px 25px;
-margin-top:50px;
 }
-#widget2links
+#tr1td2
 {
-padding-top:30px;
-padding-left:50px;
+width:70%;
+}
+#tr2td1
+{
+width:70%;
+}
+#tr2td2
+{
+width:30%;
+}
+#section3button
+{
 float:left;
-line-height:2.2;
-}
-#mico1
-{
-width:20px;
-height:20px;
-}
-#ftnico1
-{
-width:20px;
-height:20px;
-}
-#w3ico1
-{
-height:20px;
-width:20px;
-border-radius:50%;
+color:white;
+font-family:'Oswald',sans-serif;
+font-size:1.7em;
+padding:20px 20px 20px 20px;
+background-color:black;
+border-radius:10px;
+border:2px solid rgb(129,130,131);
+margin-left:50px;
+
 }
 </style>
 <script>
@@ -326,23 +343,19 @@ function myFunction() {
   document.getElementById("menubuttonico").style.backgroundColor="white";
   document.getElementById("homebuttonico").style.backgroundColor="white";
   document.getElementById("lightbulbbutton").style.backgroundColor="white";
-  document.getElementById("centraldiv-content").style.backgroundColor="black";
+  
   document.getElementById("footerbottom").style.backgroundColor="black";
   document.getElementById("footerbottomp").style.color="white";
   document.getElementById("footerbottompx").style.color="white";
   document.getElementById("footerbottom").style.borderTop="1px solid white";
   document.getElementById("footerbottom").style.borderLeft="1px solid white";
   document.getElementById("footerbottom").style.borderRight="1px solid white";
-  document.getElementById("centraldiv-widget1").style.backgroundColor="black";
-  document.getElementById("fb1").style.color="white";
-  document.getElementById("ig1").style.color="white";
-  document.getElementById("yt1").style.color="white";
-  document.getElementById("st1").style.color="white";
-  document.getElementById("widget1explanation").style.color="white";
-  document.getElementById("centraldiv-widget2").style.backgroundColor="black";
-  document.getElementById("mdl1").style.color="white";
-  document.getElementById("ftn1").style.color="white";
-  document.getElementById("w3").style.color="white";
+  document.getElementById("saznajvise").style.backgroundColor="black";
+  document.getElementById("saznajvise").style.color="white";
+  document.getElementById("section2").style.filter="invert(0%)";
+  document.getElementById("section3").style.backgroundColor="white";
+  document.getElementById("svetisavatxt").style.color="black";
+  document.getElementById("gimnazijatxt").style.color="black";
   }
   else {document.getElementById("vlheader").style.color="black";
   document.getElementById("picdiv").style.backgroundColor="black";
@@ -350,61 +363,70 @@ function myFunction() {
   document.getElementById("menubuttonico").style.backgroundColor="black";
   document.getElementById("homebuttonico").style.backgroundColor="black";
   document.getElementById("lightbulbbutton").style.backgroundColor="black";
-  document.getElementById("centraldiv-content").style.backgroundColor="white";
+  
   document.getElementById("footerbottom").style.backgroundColor="white";
   document.getElementById("footerbottomp").style.color="black";
   document.getElementById("footerbottompx").style.color="black";
   document.getElementById("footerbottom").style.borderTop="1px solid black";
   document.getElementById("footerbottom").style.borderLeft="1px solid black";
   document.getElementById("footerbottom").style.borderRight="1px solid black";
-  document.getElementById("centraldiv-widget1").style.backgroundColor="white";
-  document.getElementById("fb1").style.color="black";
-  document.getElementById("ig1").style.color="black";
-  document.getElementById("yt1").style.color="black";
-  document.getElementById("st1").style.color="black";
-  document.getElementById("widget1explanation").style.color="black";
-  document.getElementById("centraldiv-widget2").style.backgroundColor="white";
-  document.getElementById("mdl1").style.color="black";
-  document.getElementById("ftn1").style.color="black";
-  document.getElementById("w3").style.color="black";
+  document.getElementById("saznajvise").style.backgroundColor="white";
+  document.getElementById("saznajvise").style.color="black";
+  document.getElementById("section2").style.filter="invert(100%)";
+  document.getElementById("section3").style.backgroundColor="black";
+  document.getElementById("svetisavatxt").style.color="white";
+  document.getElementById("gimnazijatxt").style.color="white";
   }
  
 }
- function myFunction1() {
-  if (i%2===0)
-	{
-	document.getElementById("centraldiv-content").style.border="2px solid white";
-	}
-  else {document.getElementById("centraldiv-content").style.border="2px solid black";
-  }
-    }
-  function myFunction2() {
-  document.getElementById("centraldiv-content").style.border="2px solid rgb(129,130,131)";
-  }
+
   function myFunction3() {
   document.getElementById("footerbottom").style.display="none";
   }
-  function myFunction4() {
+
+  function saznajViseEnter() {
   if (i%2===0)
 	{
-	document.getElementById("centraldiv-widget1").style.border="2px solid white";
+	document.getElementById("saznajvise").style.border="2px solid white";
 	}
-  else {document.getElementById("centraldiv-widget1").style.border="2px solid black";
+  else {document.getElementById("saznajvise").style.border="2px solid black";
   }
     }
-  function myFunction5() {
-  document.getElementById("centraldiv-widget1").style.border="2px solid rgb(129,130,131)";
+  function saznajViseLeave() {
+  document.getElementById("saznajvise").style.border="2px solid rgb(129,130,131)";
   }
-  function myFunction6() {
+  function section2Enter() {
   if (i%2===0)
 	{
-	document.getElementById("centraldiv-widget2").style.border="2px solid white";
+	document.getElementById("section2transition").style.border="2px solid black";
 	}
-  else {document.getElementById("centraldiv-widget2").style.border="2px solid black";
+  else {document.getElementById("section2transition").style.border="2px solid white";
   }
     }
-  function myFunction7() {
-  document.getElementById("centraldiv-widget2").style.border="2px solid rgb(129,130,131)";
+  function section2Leave() {
+  document.getElementById("section2transition").style.border="2px solid rgb(129,130,131)";
+  }
+  function svetisavaEnter() {
+  if (i%2===0)
+	{
+	document.getElementById("svetisavapic").style.border="2px solid black";
+	}
+  else {document.getElementById("svetisavapic").style.border="2px solid white";
+  }
+    }
+  function svetisavaLeave() {
+  document.getElementById("svetisavapic").style.border="2px solid rgb(129,130,131)";
+  }
+  function gimnazijaEnter() {
+  if (i%2===0)
+	{
+	document.getElementById("gimnazijapic").style.border="2px solid black";
+	}
+  else {document.getElementById("gimnazijapic").style.border="2px solid white";
+  }
+    }
+  function gimnazijaLeave() {
+  document.getElementById("gimnazijapic").style.border="2px solid rgb(129,130,131)";
   }
 </script>
 </head>
@@ -424,32 +446,37 @@ function myFunction() {
 		
 	</header>
 </section>
-<div id="centraldiv">
-	<div id="centraldiv-content" onmouseenter="myFunction1()" onmouseleave="myFunction2()">
-	
-	</div>
-	<div id="centraldiv-widget1" onmouseenter="myFunction4()" onmouseleave="myFunction5()">
-		<p id="widget1links">
-			<a id="fb1"class="widget1a"href="https://www.facebook.com/veltipoweron" target="-blank"><img src="fbico.png" id="fbicopic">&ensp;Facebook</a><br><br>
-			<a id="ig1"class="widget1a"href="https://www.instagram.com/v_loncarr/" target="-blank"><img src="igico.png" id="igicopic">&ensp;Instagram</a><br><br>
-			<a id="yt1"class="widget1a"href="https://www.youtube.com/channel/UCOtuOv4M91Gupv83kmsu_jA?" target="-blank"><img src="ytico.png" id="yticopic">&ensp;Youtube</a><br><br>
-			<a id="st1"class="widget1a"href="https://steamcommunity.com/id/velti/" target="-blank"><img src="stico.png" id="sticopic">&ensp;Steam</a>
-		</p>
-		<p id="widget1explanation">
-			Вељко Лончаревић<br>
-			v_loncarr <br>
-			Veljko Lončarević<br>
-			Tycho
-		</p>
-	</div>
-	<div id="centraldiv-widget2" onmouseenter="myFunction6()" onmouseleave="myFunction7()">
-		<p id="widget2links">
-			<a id="mdl1"class="widget1a"href="https://eucenje.ftn.kg.ac.rs/" target="-blank"><img id="mico1"src="mico.png">&ensp;Eučenje</a><br>
-			<a id="ftn1"class="widget1a"href="http://www.ftn.kg.ac.rs/" target="-blank"><img id="ftnico1"src="ftnico.png">&ensp;Sajt fakulteta</a><br>
-			<a id="w3"class="widget1a"href="https://www.w3.org/" target="-blank"><img id="w3ico1"src="w3ico.ico">&ensp;W3 Consortium</a>
-		</p>
-	</div>
-</div>
+<section id="section1">
+
+<div id="divtransition"><a id="saznajviseA"href="#section2"><p  id="saznajvise"onmouseenter="saznajViseEnter()" onmouseleave="saznajViseLeave()">Saznaj više o meni</p></a></div>
+
+</section>
+
+<section id="section2">
+
+<p id="omenitxt">
+Imam 19 godina i student sam Fakulteta tehničkih nauka u Čačku!<br>
+Pohađam smer Informacione tehnologije, trenutno 2. semestar.<br>
+Rođen sam i živim u Atenici, prigradskom naselju Čačka. </p>
+<a id="section2a"href="#section3"><p onmouseenter="section2Enter()"onmouseleave="section2Leave()"id="section2transition">Moje školovanje</p></a>
+
+</section>
+<section id="section3">
+<table class="section3table">
+	<tr>
+		<td id="tr1td1"><p style="text-align:center"><img id="svetisavapic" onmouseenter="svetisavaEnter()" onmouseleave="svetisavaLeave()" src="ossvetisava.jpg"></p></td>
+		<td id="tr1td2"><p id="svetisavatxt">Svoje osnovno obrazovanje stekao sam u Osnovnoj školi "Sveti Sava",<br> koje sam završio s vukovom diplomom.</p></td>
+	</tr>
+</table>
+<table class="section3table" >
+	<tr>
+		<td id="tr2td1"><p id="section3button">Moja interesovanja</p><p id="gimnazijatxt">Svoje srednje obrazovanje stekao sam u čačanskoj Gimnaziji,<br>
+gde sam pohađao prirodno-matematički smer.</p></td>
+		<td id="tr2td2"><p style="text-align:center"><img onmouseenter="gimnazijaEnter()" onmouseleave="gimnazijaLeave()"id="gimnazijapic"src="gimnazija.jpg"></p></td>
+	</tr>
+</table>
+</section>
+
 <footer id="footerbottom">
 <p id="footerbottomp">Veljko Lončarević | 2020 &copy </p><p onclick="myFunction3()" id="footerbottompx">x</p>
 </footer>
