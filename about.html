@@ -191,11 +191,32 @@ cursor: pointer;
 }
 #section1
 {
+-webkit-animation: fadein 2s;
 width:100%;
 height:100%;
 
 color:white;
 }
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+	}
 #section2
 {
 width:100%;
@@ -325,7 +346,111 @@ background-color:black;
 border-radius:10px;
 border:2px solid rgb(129,130,131);
 margin-left:50px;
+box-shadow:5px 10px 25px black;
+cursor:pointer;
+}
+#section4
+{
+width:100%;
+height:100%;
+background-image:url('wpbokeh.jpg');
+background-color:black;
+background-repeat:no-repeat;
+background-size: 100%;
 
+}
+#games
+{
+float:left;
+width:50%;
+height:20%;
+margin-top:150px;
+margin-left:25%;
+overflow-x:scroll;
+overflow-y:hidden;
+border:1px solid black;
+backdrop-filter: blur(8px);
+}
+.gamespics
+{
+display:inline;
+height:100%;
+}
+#gameswrapper
+{
+width:200%;
+height:100%;
+}
+#games::-webkit-scrollbar {
+  width: 10px;
+}
+#games::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+#games::-webkit-scrollbar-thumb {
+  background: #888;
+}
+#games::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+#velikisamfan
+{
+margin-top:50px;
+font-family:'Oswald',sans-serif;
+color:white;
+float:left;
+font-size:1.4em;
+margin-left:35%;
+background-color:red;
+box-shadow:5px 10px 25px red;
+
+}
+#section4transition
+{
+margin-top:150px;
+font-family:'Oswald',sans-serif;
+color:white;
+float:left;
+font-size:2em;
+padding:10px 20px 10px 20px;
+background-color:black;
+box-shadow:5px 10px 25px black;
+margin-left:-450px;
+border:2px solid rgb(129,130,131);
+border-radius:10px;
+cursor:pointer;
+}
+#section5
+{
+height:100%;
+width:100%;
+background-color:red;
+}
+#section4ahref
+{
+color:white;
+text-decoration:none;
+}
+#section5
+{
+background-image:url("nihilus.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#starwarstable
+{
+margin-right:15%;
+float:right;
+width:30%;
+margin-top:300px;
+}
+.swpic
+{
+width:100%;
+transition: transform 1s;
+}
+.swpic:hover {
+  transform: scale(1.5); 
 }
 </style>
 <script>
@@ -356,6 +481,13 @@ function myFunction() {
   document.getElementById("section3").style.backgroundColor="white";
   document.getElementById("svetisavatxt").style.color="black";
   document.getElementById("gimnazijatxt").style.color="black";
+  document.getElementById("section3button").style.backgroundColor="black";
+  document.getElementById("section3button").style.color="white";
+  document.getElementById("section3button").style.boxShadow="5px 10px 25px black";
+  document.getElementById("velikisamfan").style.color="white";
+  document.getElementById("section4transition").style.backgroundColor="black";
+  document.getElementById("section4transition").style.color="white";
+  document.getElementById("section4transition").style.boxShadow="5px 10px 25px black";
   }
   else {document.getElementById("vlheader").style.color="black";
   document.getElementById("picdiv").style.backgroundColor="black";
@@ -376,6 +508,13 @@ function myFunction() {
   document.getElementById("section3").style.backgroundColor="black";
   document.getElementById("svetisavatxt").style.color="white";
   document.getElementById("gimnazijatxt").style.color="white";
+  document.getElementById("section3button").style.backgroundColor="white";
+  document.getElementById("section3button").style.color="black";
+  document.getElementById("section3button").style.boxShadow="5px 10px 25px white";
+  document.getElementById("velikisamfan").style.color="black";
+  document.getElementById("section4transition").style.backgroundColor="white";
+  document.getElementById("section4transition").style.color="black";
+  document.getElementById("section4transition").style.boxShadow="5px 10px 25px white";
   }
  
 }
@@ -428,6 +567,28 @@ function myFunction() {
   function gimnazijaLeave() {
   document.getElementById("gimnazijapic").style.border="2px solid rgb(129,130,131)";
   }
+  function section3buttonEnter() {
+  if (i%2===0)
+	{
+	document.getElementById("section3button").style.border="2px solid white";
+	}
+  else {document.getElementById("section3button").style.border="2px solid black";
+  }
+    }
+  function section3buttonLeave() {
+  document.getElementById("section3button").style.border="2px solid rgb(129,130,131)";
+  }
+  function section4buttonEnter() {
+  if (i%2===0)
+	{
+	document.getElementById("section4transition").style.border="2px solid white";
+	}
+  else {document.getElementById("section4transition").style.border="2px solid black";
+  }
+    }
+  function section4buttonLeave() {
+  document.getElementById("section4transition").style.border="2px solid rgb(129,130,131)";
+  }
 </script>
 </head>
 <body>
@@ -470,13 +631,50 @@ Rođen sam i živim u Atenici, prigradskom naselju Čačka. </p>
 </table>
 <table class="section3table" >
 	<tr>
-		<td id="tr2td1"><p id="section3button">Moja interesovanja</p><p id="gimnazijatxt">Svoje srednje obrazovanje stekao sam u čačanskoj Gimnaziji,<br>
+		<td id="tr2td1"><a href="#section4" style="text-decoration:none;color:white;"><p onmouseenter="section3buttonEnter()"onmouseleave="section3buttonLeave()"id="section3button">Moja interesovanja</p></a><p id="gimnazijatxt">Svoje srednje obrazovanje stekao sam u čačanskoj Gimnaziji,<br>
 gde sam pohađao prirodno-matematički smer.</p></td>
 		<td id="tr2td2"><p style="text-align:center"><img onmouseenter="gimnazijaEnter()" onmouseleave="gimnazijaLeave()"id="gimnazijapic"src="gimnazija.jpg"></p></td>
 	</tr>
 </table>
 </section>
 
+<section id="section4">
+
+<div id="games">
+	<div id="gameswrapper">
+		<a href="https://store.steampowered.com/app/204100/Max_Payne_3/" target="-blank"><img class="gamespics" src="maxpayne.jpg"></a>
+		<a href="https://store.steampowered.com/app/24980/Mass_Effect_2/"target="-blank"><img class="gamespics"src="masseffect2.jpg"></a>
+		<a href="https://store.steampowered.com/app/974910/Magical_Diary_Wolf_Hall/"target="-blank"><img class="gamespics"src="magicaldiary2.jpg"></a>
+		<a href="https://store.steampowered.com/app/22320/The_Elder_Scrolls_III_Morrowind_Game_of_the_Year_Edition/"target="-blank"><img class="gamespics"src="morrowind.jpg"></a>
+		<a href="https://store.steampowered.com/app/3920/Sid_Meiers_Pirates/"target="-blank"><img class="gamespics"src="sidmeierspirates.jpg"></a>
+	</div>
+</div>
+<p id="velikisamfan">
+Veliki sam fan video igara. Ovde možete videti neke od mojih omiljenih.
+</p>
+
+<a id="section4ahref"href="#section5"><p onmouseenter="section4buttonEnter()"onmouseleave="section4buttonLeave()"id="section4transition">
+Serijali koje pratim
+</p></a>
+</section>
+
+<section id="section5">
+<table id="starwarstable">
+	<tr>
+		<td><a href="https://store.steampowered.com/app/32370/STAR_WARS__Knights_of_the_Old_Republic/"target="-blank"><img class="swpic"src="kotor1.jpg"></a></td>
+		<td><a href="https://store.steampowered.com/app/208580/STAR_WARS_Knights_of_the_Old_Republic_II__The_Sith_Lords/"target="-blank"><img class="swpic"src="kotor2.jpg"></a></td>
+	</tr>
+	<tr>
+		<td><a href="https://store.steampowered.com/app/6030/STAR_WARS_Jedi_Knight_II__Jedi_Outcast/" target="-blank"><img class="swpic"src="jedioutcast.jpg"></a></td>
+		<td><a href="https://store.steampowered.com/app/6020/STAR_WARS_Jedi_Knight__Jedi_Academy/"target="-blank"><img class="swpic"src="jediacademy.jpg"></a></td>
+	</tr>
+	<tr>
+		<td><a href="https://store.steampowered.com/app/1058020/STAR_WARS_Battlefront_Classic_2004/"target="-blank"><img class="swpic"src="battlefront1.jpg"></a></td>
+		<td><a href="https://store.steampowered.com/app/6060/Star_Wars_Battlefront_2_Classic_2005/"target="-blank"><img class="swpic"src="battlefront2.jpg"></a></td>
+	</tr>
+
+</table>
+</section>
 <footer id="footerbottom">
 <p id="footerbottomp">Veljko Lončarević | 2020 &copy </p><p onclick="myFunction3()" id="footerbottompx">x</p>
 </footer>
