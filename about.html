@@ -128,7 +128,7 @@ width:50px;
 height:50px;
 float:right;
 border-radius:50%;
-margin-right:50px;
+margin-right:10px;
 margin-top:10px;
 }
 #lightbulbbutton
@@ -452,8 +452,24 @@ transition: transform 1s;
 .swpic:hover {
   transform: scale(1.5); 
 }
+#ensr
+{
+background-color:rgb(174,31,255);
+width:50px;
+height:50px;
+float:right;
+border-radius:50%;
+margin-right:50px;
+margin-top:10px;
+color:white;
+font-family:'Oswald',sans-serif;
+text-align:center;
+font-size:2em;
+cursor:pointer;
+}
 </style>
 <script>
+
 let i=0;
 function myFunction() {
   let element = document.getElementById("myHeader");
@@ -488,6 +504,7 @@ function myFunction() {
   document.getElementById("section4transition").style.backgroundColor="black";
   document.getElementById("section4transition").style.color="white";
   document.getElementById("section4transition").style.boxShadow="5px 10px 25px black";
+  document.getElementById("ensr").style.color="white";
   }
   else {document.getElementById("vlheader").style.color="black";
   document.getElementById("picdiv").style.backgroundColor="black";
@@ -515,6 +532,7 @@ function myFunction() {
   document.getElementById("section4transition").style.backgroundColor="white";
   document.getElementById("section4transition").style.color="black";
   document.getElementById("section4transition").style.boxShadow="5px 10px 25px white";
+  document.getElementById("ensr").style.color="black";
   }
  
 }
@@ -589,12 +607,46 @@ function myFunction() {
   function section4buttonLeave() {
   document.getElementById("section4transition").style.border="2px solid rgb(129,130,131)";
   }
+  
+let q=0;
+  function prevediSve(){
+  
+  if (q%2===0)
+	{
+	document.getElementById("saznajvise").innerHTML="Get to know me better";
+	document.getElementById("omenitxt").innerHTML="I'm 19 years old and currently a student at Faculty of Technical Sciences in Čačak!<br>I'm enrolled in an Information Technologies course, 2nd semester.<br>I was born and still live in Atenica, Čačak.";
+	document.getElementById("section2transition").innerHTML="Heretofore education";
+	document.getElementById("svetisavatxt").innerHTML="I finished my primary education in Primary School Sveti Sava, with highest grades.";
+	document.getElementById("gimnazijatxt").innerHTML="I received my High School diploma in Čačak's Gymnasium, <br>where I studied natural sciences and mathematics.";
+	document.getElementById("section3button").innerHTML="My interests";
+	document.getElementById("velikisamfan").innerHTML="I'm a huge fan of video games! Here are some of my favorites.";
+	document.getElementById("section4transition").innerHTML="Sagas I follow";
+	document.getElementById("ensr").innerHTML="EN";
+	q++;
+	}
+	else if (q%2!==0)
+	{
+	document.getElementById("saznajvise").innerHTML="Saznaj više o meni";
+	document.getElementById("omenitxt").innerHTML="Imam 19 godina i student sam Fakulteta tehničkih nauka u Čačku!<br>Pohađam smer Informacione tehnologije, trenutno 2. semestar.<br>Rođen sam i živim u Atenici, prigradskom naselju Čačka. ";
+	document.getElementById("section2transition").innerHTML="Moje školovanje";
+	document.getElementById("svetisavatxt").innerHTML="Svoje osnovno obrazovanje stekao sam u Osnovnoj školi Sveti Sava,<br> koje sam završio s vukovom diplomom.";
+	document.getElementById("gimnazijatxt").innerHTML="Svoje srednje obrazovanje stekao sam u čačanskoj Gimnaziji,<br>gde sam pohađao prirodno-matematički smer.";
+	document.getElementById("section3button").innerHTML="Moja interesovanja";
+	document.getElementById("velikisamfan").innerHTML="Veliki sam fan video igara. Ovde možete videti neke od mojih omiljenih.";
+	document.getElementById("section4transition").innerHTML="Serijali koje pratim";
+	document.getElementById("ensr").innerHTML="SR";
+	q++;
+	}
+  }
+
 </script>
+
 </head>
 <body>
 <section>
 	<header id="myHeader" class="dark-mode">
 		<div id="picdiv" ><img id="hlogotp" src="hlogotp.png"></div><div id="vlheader" class="Veljkoclass">Veljko Lončarević</div>
+		<div id="ensr" onclick="prevediSve()">SR</div>
 		<div id="lightbulb"><button onclick="myFunction()" id="lightbulbbutton"></button></div>
 		<div id="menubuttonico"><img id="menubuttonicopic"src="menubuttonico.png">
 			<div class="dropdown-content">

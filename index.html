@@ -130,7 +130,7 @@ width:50px;
 height:50px;
 float:right;
 border-radius:50%;
-margin-right:50px;
+margin-right:10px;
 margin-top:10px;
 }
 #lightbulbbutton
@@ -415,6 +415,21 @@ color:white;
 font-family:'Oswald',sans-serif;
 text-align:center;
 }
+#ensr
+{
+background-color:rgb(174,31,255);
+width:50px;
+height:50px;
+float:right;
+border-radius:50%;
+margin-right:50px;
+margin-top:10px;
+color:white;
+font-family:'Oswald',sans-serif;
+text-align:center;
+font-size:2em;
+cursor:pointer;
+}
 </style>
 <script>
 let i=0;
@@ -492,6 +507,7 @@ function myFunction() {
   document.getElementById("izrprsk").style.backgroundColor="black";
   document.getElementById("prsk").style.color="white";
   document.getElementById("prosek").style.color="white";
+  document.getElementById("ensr").style.color="white";
   }
   else {
   document.getElementById("vlheader").style.color="black";
@@ -561,6 +577,7 @@ function myFunction() {
   document.getElementById("izrprsk").style.backgroundColor="white";
   document.getElementById("prsk").style.color="black";
   document.getElementById("prosek").style.color="black";
+  document.getElementById("ensr").style.color="black";
   }
  
 }
@@ -1898,12 +1915,40 @@ function a1Enter() {
   function widget3Leave() {
   document.getElementById("centraldiv-widget3").style.border="2px solid rgb(129,130,131)";
   }
+  let q=0;
+  function prevediSve(){
+  
+  if (q%2===0)
+	{
+	document.getElementById("dobrodosli").innerHTML="Hello!";
+	document.getElementById("centraltext").innerHTML="My name is Veljko Lončarević and you're currently on my web-site. On this page you may find introductory tutorials about HTML & CSS, links to my social network pages, as well as some useful links. You can also find out something about me by going to the 'About me' page in the drowdown menu on the upper left side of the screen. There you can also find my recreation of the Moodle e-study page of the PRRA subject, as well as some of my other projects. One interesting feature that I've added is the dark-light theme mode. Just press the lightbulb and watch the magic unfold! <br><br> For HTML and CSS tutorials, choose the lecture:";
+	document.getElementById("eucenjetext").innerHTML="Moodle eStudy";
+	document.getElementById("ftnwstext").innerHTML="FTN web-site";
+	document.getElementById("izrprsk").innerHTML="Calculate";
+	document.getElementById("prsk").innerHTML="Average grade:";
+	document.getElementById("ensr").innerHTML="EN";
+	q++;
+	}
+	else if (q%2!==0)
+	{
+	document.getElementById("centraltext").innerHTML='Moje ime je Veljko Lončarević, i trenutno se nalazite na mom veb sajtu. Na ovoj stranici možete pronaći uvodne tutorijale o HTML-u i CSS-u, moje društvene mreže, kao i neke korisne linkove. Takođe možete saznati nešto o meni odlaskom na stranicu "O meni", koju možete pronaći u meniju s desne strane pri vrhu. U meniju možete pronaći i moju rekreaciju Moodle Eučenje stranice o PRRA predmetu, kao i neke moje ostale projekte. Jedna od zanimljivih opcija koje sam implementirao je svetla-tamna tema! Kliknite na dugme s sličicom sijalice pored menija i pratite magiju.<br><br>Za tutorijale o HTML-u i CSS-u, odaberite lekciju:';
+	document.getElementById("dobrodosli").innerHTML="Zdravo!";
+	document.getElementById("eucenjetext").innerHTML="Eučenje";
+	document.getElementById("ftnwstext").innerHTML="Sajt fakulteta";
+	document.getElementById("izrprsk").innerHTML="Izračunaj prosek";
+	document.getElementById("prsk").innerHTML="Prosek:";
+	document.getElementById("ensr").innerHTML="SR";
+	q++;
+	}
+  }
+
 </script>
 </head>
 <body>
 <section>
 	<header id="myHeader" class="dark-mode">
 		<div id="picdiv" ><img id="hlogotp" src="hlogotp.png"></div><div id="vlheader" class="Veljkoclass">Veljko Lončarević</div>
+		<div id="ensr" onclick="prevediSve()">SR</div>
 		<div id="lightbulb"><button onclick="myFunction()" id="lightbulbbutton"></button></div>
 		<div id="menubuttonico"><img id="menubuttonicopic"src="menubuttonico.png">
 			<div class="dropdown-content">
@@ -1942,9 +1987,9 @@ function a1Enter() {
 	</div>
 	<div id="centraldiv-widget2" onmouseenter="myFunction6()" onmouseleave="myFunction7()">
 		<p id="widget2links">
-			<a id="mdl1"class="widget1a"href="https://eucenje.ftn.kg.ac.rs/" target="-blank"><img id="mico1"src="mico.png">&ensp;Eučenje</a><br>
-			<a id="ftn1"class="widget1a"href="http://www.ftn.kg.ac.rs/" target="-blank"><img id="ftnico1"src="ftnico.png">&ensp;Sajt fakulteta</a><br>
-			<a id="w3"class="widget1a"href="https://www.w3.org/" target="-blank"><img id="w3ico1"src="w3ico.ico">&ensp;W3 Consortium</a>
+			<a id="mdl1"class="widget1a"href="https://eucenje.ftn.kg.ac.rs/" target="-blank"><img id="mico1"src="mico.png">&ensp;<span id="eucenjetext">Eučenje</span></a><br>
+			<a id="ftn1"class="widget1a"href="http://www.ftn.kg.ac.rs/" target="-blank"><img id="ftnico1"src="ftnico.png">&ensp;<span id="ftnwstext">Sajt fakulteta</span></a><br>
+			<a id="w3"class="widget1a"href="https://www.w3.org/" target="-blank"><img id="w3ico1"src="w3ico.ico">&ensp;<span id="w3text">W3 Consortium</span></a>
 		</p>
 	</div>
 	<div onmouseenter="widget3Enter()"onmouseleave="widget3Leave()"id="centraldiv-widget3">
