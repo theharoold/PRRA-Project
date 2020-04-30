@@ -433,6 +433,8 @@ text-decoration:none;
 }
 #section5
 {
+width:100%;
+height:100%;
 background-image:url("nihilus.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -466,6 +468,153 @@ font-family:'Oswald',sans-serif;
 text-align:center;
 font-size:2em;
 cursor:pointer;
+}
+#section6
+{
+width:100%;
+height:100%;
+background-image:url('witcherwp.jpg');
+background-color:rgb(118,146,150);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+.witcherpics
+{
+height:117px;
+width:250px;
+}
+
+#witchertable
+{
+float:left;
+margin-top:250px;
+width:500px;
+
+margin-left:100px;
+}
+
+.witcherpics:hover {
+transition: transform 1s;
+  transform: scale(1.5); 
+}
+#section6a
+{
+color:white;
+text-decoration:none;
+
+}
+#section6transition
+{
+padding:10px 20px 10px 20px;
+background-color:black;
+border-radius:10px;
+float:right;
+border: 2px solid rgb(129,130,131);
+font-family:'Oswald',sans-serif;
+font-size:2em;
+box-shadow:5px 10px 25px black;
+margin-top:20%;
+margin-right:150px;
+}
+#section5a
+{
+color:white;
+text-decoration:none;
+
+}
+#section5transition
+{
+padding:10px 20px 10px 20px;
+background-color:black;
+border-radius:10px;
+float:left;
+margin-top:20%;
+font-family:'Oswald',sans-serif;
+font-size:2em;
+margin-left:10%;
+border: 2px solid rgb(129,130,131);
+box-shadow:5px 10px 25px black;
+}
+#section7
+{
+width:100%;
+height:100%;
+background-image:url('hogwartswp.jpg');
+background-color:black;
+    background-repeat: no-repeat;
+  
+overflow:hidden;
+}
+#hpqwc
+{
+float:left;
+margin-top:15%;
+margin-left:100px;
+}
+.hppic
+{
+height:250px;
+width:166px;
+}
+.hppic:hover {
+transition: transform 1s;
+  transform: scale(1.5); 
+}
+#hptable
+{
+float:right;
+margin-right:100px;
+margin-top:200px;
+}
+#section8
+{
+background-color:black;
+height:100%;
+width:100%;
+
+}
+#mojaslika
+{
+border-radius:50%;
+height:250px;
+
+}
+#vldole
+{
+font-family:'Oswald',sans-serif;
+cursor:default;
+font-size:4em;
+
+color:white;
+}
+.tableicons
+{
+height:25px;
+}
+#section8maintable
+{
+float:left;
+margin-top:250px;
+margin-left:20%;
+}
+.tableicons:hover
+{
+opacity:0.7;
+}
+#section7transition
+{
+float:left;
+background-color:black;
+border-radius:10px;
+border:2px solid rgb(129,130,131);
+padding:10px 20px 10px 20px;
+color:white;
+font-family:'Oswald',sans-serif;
+font-size:2em;
+margin-top:33%;
+margin-left:-300px;
+box-shadow:5px 10px 25px black;
 }
 </style>
 <script>
@@ -505,6 +654,15 @@ function myFunction() {
   document.getElementById("section4transition").style.color="white";
   document.getElementById("section4transition").style.boxShadow="5px 10px 25px black";
   document.getElementById("ensr").style.color="white";
+  document.getElementById("section5transition").style.backgroundColor="black";
+  document.getElementById("section5transition").style.color="white";
+  document.getElementById("section5transition").style.boxShadow="5px 10px 25px black";
+  document.getElementById("section6transition").style.backgroundColor="black";
+  document.getElementById("section6transition").style.color="white";
+  document.getElementById("section6transition").style.boxShadow="5px 10px 25px black";
+  document.getElementById("section7transition").style.backgroundColor="black";
+  document.getElementById("section7transition").style.color="white";
+  document.getElementById("section7transition").style.boxShadow="5px 10px 25px black";
   }
   else {document.getElementById("vlheader").style.color="black";
   document.getElementById("picdiv").style.backgroundColor="black";
@@ -533,6 +691,15 @@ function myFunction() {
   document.getElementById("section4transition").style.color="black";
   document.getElementById("section4transition").style.boxShadow="5px 10px 25px white";
   document.getElementById("ensr").style.color="black";
+  document.getElementById("section5transition").style.backgroundColor="white";
+  document.getElementById("section5transition").style.color="black";
+  document.getElementById("section5transition").style.boxShadow="5px 10px 25px white";
+  document.getElementById("section6transition").style.backgroundColor="white";
+  document.getElementById("section6transition").style.color="black";
+  document.getElementById("section6transition").style.boxShadow="5px 10px 25px white";
+  document.getElementById("section7transition").style.backgroundColor="white";
+  document.getElementById("section7transition").style.color="black";
+  document.getElementById("section7transition").style.boxShadow="5px 10px 25px white";
   }
  
 }
@@ -607,6 +774,50 @@ function myFunction() {
   function section4buttonLeave() {
   document.getElementById("section4transition").style.border="2px solid rgb(129,130,131)";
   }
+  function section5buttonEnter() {
+  if (i%2===0)
+	{
+	document.getElementById("section5transition").style.border="2px solid white";
+	}
+  else {document.getElementById("section5transition").style.border="2px solid black";
+  }
+    }
+  function section5buttonLeave() {
+  document.getElementById("section5transition").style.border="2px solid rgb(129,130,131)";
+  }
+  function section6buttonEnter() {
+  if (i%2===0)
+	{
+	document.getElementById("section6transition").style.border="2px solid white";
+	}
+  else {document.getElementById("section6transition").style.border="2px solid black";
+  }
+    }
+  function section6buttonLeave() {
+  document.getElementById("section6transition").style.border="2px solid rgb(129,130,131)";
+  }
+  function hpssEnter() {
+  if (i%2===0)
+	{
+	document.getElementById("hpss").style.border="2px solid white";
+	}
+  else {document.getElementById("hpss").style.border="2px solid black";
+  }
+    }
+  function hpssLeave() {
+  document.getElementById("hpss").style.border="2px solid rgb(129,130,131)";
+  }
+  function section7Enter() {
+  if (i%2===0)
+	{
+	document.getElementById("section7transition").style.border="2px solid white";
+	}
+  else {document.getElementById("section7transition").style.border="2px solid black";
+  }
+    }
+  function section7Leave() {
+  document.getElementById("section7transition").style.border="2px solid rgb(129,130,131)";
+  }
   
 let q=0;
   function prevediSve(){
@@ -622,6 +833,11 @@ let q=0;
 	document.getElementById("velikisamfan").innerHTML="I'm a huge fan of video games! Here are some of my favorites.";
 	document.getElementById("section4transition").innerHTML="Sagas I follow";
 	document.getElementById("ensr").innerHTML="EN";
+	document.getElementById("omeni12txt").innerHTML="About me";
+	document.getElementById("drugiradtxt").innerHTML="Other projects";
+	document.getElementById("section6transition").innerHTML="Next saga";
+	document.getElementById("section7transition").innerHTML="My social networks";
+	document.getElementById("section5transition").innerHTML="Next saga";
 	q++;
 	}
 	else if (q%2!==0)
@@ -635,6 +851,11 @@ let q=0;
 	document.getElementById("velikisamfan").innerHTML="Veliki sam fan video igara. Ovde možete videti neke od mojih omiljenih.";
 	document.getElementById("section4transition").innerHTML="Serijali koje pratim";
 	document.getElementById("ensr").innerHTML="SR";
+	document.getElementById("omeni12txt").innerHTML="O meni";
+	document.getElementById("drugiradtxt").innerHTML="Drugi rad";
+	document.getElementById("section7transition").innerHTML="Moje društvene mreže";
+	document.getElementById("section6transition").innerHTML="Naredni serijal";
+	document.getElementById("section5transition").innerHTML="Sledeći serijal";
 	q++;
 	}
   }
@@ -650,9 +871,9 @@ let q=0;
 		<div id="lightbulb"><button onclick="myFunction()" id="lightbulbbutton"></button></div>
 		<div id="menubuttonico"><img id="menubuttonicopic"src="menubuttonico.png">
 			<div class="dropdown-content">
-				<a class="menua"href="about.html">O meni</a>
-				<a class="menua"href="mainpage.html">PRRA</a>
-				<a class="menua"href="https://theharoold.github.io/website-projects/" target="-blank">Drugi rad</a>
+				<a class="menua"href="about.html"><span id="omeni12txt">O meni</span></a>
+				<a class="menua"href="mainpage.html"><span id="prratxt">PRRA</span></a>
+				<a class="menua"href="https://theharoold.github.io/website-projects/" target="-blank"><span id="drugiradtxt">Drugi rad</span></a>
 			</div>
 		</div>
 		<div id="homebuttonico"><a href="index.html"><img id="homebuttonicopic"src="homebuttonico.png"></a></div>
@@ -726,7 +947,78 @@ Serijali koje pratim
 	</tr>
 
 </table>
+
+<a id="section5a"href="#section6"><p onmouseenter="section5buttonEnter()"onmouseleave="section5buttonLeave()"id="section5transition">Sledeći serijal</p></a>
+
 </section>
+<section id="section6">
+
+<table id="witchertable">
+	<tr>
+		<td><a href="https://www.gog.com/game/the_witcher_3_wild_hunt_game_of_the_year_edition" target="-blank"><img class="witcherpics"src="witcher3.jpg"></a></td>
+		<td><a href="https://www.gog.com/game/the_witcher_2" target="-blank"><img class="witcherpics"src="witcher2.jpg"></a></td>
+	</tr>
+	<tr>
+		<td><a href="https://www.gog.com/game/the_witcher" target="-blank"><img class="witcherpics"src="witcher1.jpg"></a></td>
+		<td><a href="https://www.netflix.com/title/80189685" target="-blank"><img class="witcherpics"src="witchershow.jpg"></a></td>
+	</tr>
+
+</table>
+<a id="section6a"href="#section7"><p onmouseenter="section6buttonEnter()"onmouseleave="section6buttonLeave()"id="section6transition">Naredni serijal</p></a>
+</section>
+
+<section id="section7">
+
+<table id="hptable">
+	<tr>
+		<td><a href="https://hbogo.rs/filmovi/hari-poter-i-kamen-mudrosti" target="-blank"><img class="hppic"src="hpss.jpg"></a></td>
+		<td><a href="https://hbogo.rs/filmovi/hari-poter-i-dvorana-tajni" target="-blank"><img class="hppic"src="hpcos.jpg"></a></td>
+		<td><a href="https://hbogo.rs/filmovi/hari-poter-i-zatvorenik-iz-askabana" target="-blank"><img class="hppic"src="hppoa.jpg"></a></td>
+		<td><a href="https://hbogo.rs/filmovi/hari-poter-i-vatreni-pehar" target="-blank"><img class="hppic"src="hpgof.jpg"></a></td>
+	</tr>
+	<tr>
+		<td><a href="https://hbogo.rs/filmovi/hari-poter-i-red-feniksa" target="-blank"><img class="hppic"src="hpootp.jpg"></a></td>
+		<td><a href="https://hbogo.rs/filmovi/hari-poter-i-polukrvni-princ" target="-blank"><img class="hppic"src="hphbp.jpg"></a></td>
+		<td><a href="https://hbogo.rs/filmovi/hari-poter-i-relikvije-smrti-1" target="-blank"><img class="hppic"src="hptdhp1.jpg"></a></td>
+		<td><a href="https://hbogo.rs/filmovi/hari-poter-i-relikvije-smrti-2" target="-blank"><img class="hppic"src="hptdhp2.jpg"></a></td>
+	</tr>
+</table>
+<iframe id="hpqwc"width="400" height="220" src="https://www.youtube.com/embed/ytuqNLQJOz4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<a href="#section8"><p onmouseenter="section7Enter()"onmouseleave="section7Leave()" id="section7transition">Moje društvene mreže</p></a>
+</section>
+
+<section id="section8">
+<table id="section8maintable">
+	
+	
+	<tr>
+		<td>
+		<img src="mojaslika.jpg"id="mojaslika">
+		</td>
+		<td>
+			<h1 id="vldole">Veljko Lončarević&trade;</h1>
+			<table  style="margin-left:auto;margin-right:auto;">
+	<tr>
+		<td>
+		<a href="https://www.facebook.com/veltipoweron" target="-blank"><img class="tableicons"src="fbico.png"></a>
+		</td>
+		<td>
+		<a href="https://www.instagram.com/v_loncarr/" target="-blank"><img class="tableicons"src="igico.png"></a>
+		</td>
+		<td>
+		<a href="https://www.youtube.com/channel/UCOtuOv4M91Gupv83kmsu_jA?" target="-blank"><img class="tableicons"src="ytico.png"></a>
+		</td>
+		<td>
+		<a href="https://steamcommunity.com/id/velti/" target="-blank"><img class="tableicons"src="stico.png"></a>
+		</td>
+	</tr>
+</table>
+		</td>
+	</tr>
+</table>
+
+</section>
+
 <footer id="footerbottom">
 <p id="footerbottomp">Veljko Lončarević | 2020 &copy </p><p onclick="myFunction3()" id="footerbottompx">x</p>
 </footer>

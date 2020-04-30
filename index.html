@@ -1927,6 +1927,8 @@ function a1Enter() {
 	document.getElementById("izrprsk").innerHTML="Calculate";
 	document.getElementById("prsk").innerHTML="Average grade:";
 	document.getElementById("ensr").innerHTML="EN";
+	document.getElementById("omenitxt").innerHTML="About me";
+	document.getElementById("drugiradtxt").innerHTML="Other projects";
 	q++;
 	}
 	else if (q%2!==0)
@@ -1938,6 +1940,8 @@ function a1Enter() {
 	document.getElementById("izrprsk").innerHTML="Izračunaj prosek";
 	document.getElementById("prsk").innerHTML="Prosek:";
 	document.getElementById("ensr").innerHTML="SR";
+	document.getElementById("omenitxt").innerHTML="O meni";
+	document.getElementById("drugiradtxt").innerHTML="Drugi rad";
 	q++;
 	}
   }
@@ -1952,9 +1956,9 @@ function a1Enter() {
 		<div id="lightbulb"><button onclick="myFunction()" id="lightbulbbutton"></button></div>
 		<div id="menubuttonico"><img id="menubuttonicopic"src="menubuttonico.png">
 			<div class="dropdown-content">
-				<a class="menua"href="about.html">O meni</a>
-				<a class="menua"href="mainpage.html">PRRA</a>
-				<a class="menua"href="https://theharoold.github.io/website-projects/" target="-blank">Drugi rad</a>
+				<a class="menua"href="about.html"><span id="omenitxt">O meni</span></a>
+				<a class="menua"href="mainpage.html"><span id="prratext">PRRA</span></a>
+				<a class="menua"href="https://theharoold.github.io/website-projects/" target="-blank"><span id="drugiradtxt">Drugi rad</span></a>
 			</div>
 		</div>
 		<div id="homebuttonico"><a href="index.html"><img id="homebuttonicopic"src="homebuttonico.png"></a></div>
