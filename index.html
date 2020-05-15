@@ -4,6 +4,7 @@
 <link rel="icon" href="vlico.png">
 <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>
 Veljko Lončarević
 </title>
@@ -33,6 +34,12 @@ height:70px;
 background-color:white;
 
 border-bottom:1px solid white;
+-webkit-touch-callout: none; 
+    -webkit-user-select: none;
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none;
 }
 .dark-mode
 {
@@ -196,6 +203,7 @@ border-color:rgb(129,130,131);
 border-style:solid;
 border-width:2px;
 box-shadow:5px 10px 25px;
+overflow-y:auto;
 }
 #centraldiv-content:hover
 {
@@ -430,6 +438,97 @@ text-align:center;
 font-size:2em;
 cursor:pointer;
 }
+#popup
+{
+position:fixed;
+width:100%;
+height:100%;
+background-color:rgba(255,255,255,0.6);
+top:0;
+left:0;
+display:none;
+}
+#popupcontent
+{
+width:430px;
+height:200px;
+background-color:black;
+margin-left:40%;
+margin-top:15%;
+border-radius:10px;
+border: 3px solid rgb(130,130,130);
+cursor:default;
+}
+#popupcontenttext
+{
+font-family:'Oswald',sans-serif;
+color:white;
+text-align:center;
+font-size:1.4em;
+margin-left:5px;
+margin-right:5px;
+}
+#popupcontentbutton
+{
+color:white;
+text-align:center;
+font-family:'Oswald',sans-serif;
+font-size:1em;
+margin-left:120px;
+margin-right:120px;
+margin-top:40px;
+padding:10px;
+border:2px solid rgb(129,130,131);
+border-radius:10px;
+cursor:pointer;
+}
+.thbuttons
+{
+padding:5px 10px 5px 10px;
+font-family:'Oswald',sans-serif;
+color:white;
+font-size:1.4em;
+cursor:pointer;
+}
+#videotutorijal
+{
+background-color:white;
+width:80%;
+height:600px;
+overflow-y:auto;
+margin-left:auto;
+margin-right:auto;
+margin-top:100px;
+}
+#videotutorijalcontainer
+{
+background-color:black;
+width:100%;
+height:600px;
+overflow-y:auto;
+}
+#tdHTML:hover
+{
+background-color:rgba(130,130,130,0.5);
+}
+#tdCSS:hover
+{
+background-color:rgba(130,130,130,0.5);
+}
+#oHTMLu
+{
+color:white;
+font-family:'Oswald',sans-serif;
+padding-left:20px;
+padding-right:20px;
+font-size:20px;
+}
+li
+{
+color:white;
+font-family:'Oswald',sans-serif;
+font-size:20px;
+}
 </style>
 <script>
 let i=0;
@@ -508,6 +607,16 @@ function myFunction() {
   document.getElementById("prsk").style.color="white";
   document.getElementById("prosek").style.color="white";
   document.getElementById("ensr").style.color="white";
+  document.getElementById("tdHTML").style.color="white";
+  document.getElementById("tdCSS").style.color="white";
+  document.getElementById("videotutorijalcontainer").style.backgroundColor="black";
+  document.getElementById("oHTMLu").style.color="white";
+  document.getElementById("li1").style.color="white";
+  document.getElementById("li2").style.color="white";
+  document.getElementById("li3").style.color="white";
+  document.getElementById("li4").style.color="white";
+  document.getElementById("li5").style.color="white";
+  document.getElementById("li6").style.color="white";
   }
   else {
   document.getElementById("vlheader").style.color="black";
@@ -578,6 +687,16 @@ function myFunction() {
   document.getElementById("prsk").style.color="black";
   document.getElementById("prosek").style.color="black";
   document.getElementById("ensr").style.color="black";
+  document.getElementById("tdHTML").style.color="black";
+  document.getElementById("tdCSS").style.color="black";
+  document.getElementById("videotutorijalcontainer").style.backgroundColor="white";
+  document.getElementById("oHTMLu").style.color="black";
+  document.getElementById("li1").style.color="black";
+  document.getElementById("li2").style.color="black";
+  document.getElementById("li3").style.color="black";
+  document.getElementById("li4").style.color="black";
+  document.getElementById("li5").style.color="black";
+  document.getElementById("li6").style.color="black";
   }
  
 }
@@ -1916,6 +2035,35 @@ function a1Enter() {
   document.getElementById("centraldiv-widget3").style.border="2px solid rgb(129,130,131)";
   }
   let q=0;
+  let htmlcss=0;
+  function onClickHTML(){
+	document.getElementById("videoiframe").src="https://www.youtube.com/embed/EUGHSEDBWyE";
+	htmlcss=0;
+	if (htmlcss===0)
+	{
+		document.getElementById("oHTMLu").innerHTML="HTML (Hyper Text Markup Language) predstavlja markerski jezik koji se koristi za kreiranje sadržaja veb stranice.<br>Aktuelni HTML standard je HTML 4.01, a telo zaduženo za njegov razvoj je W3 Consortium (link možete pronaći u vidžetu desno)<br>U video tutorijalu iznad možete saznati:<br><ul><li> Osnovnu HTML sintaksu<li> Osnovne HTML tagove<li> Obradu teksta<li> Rad sa slikama<li> Tabele<li> Linkovanje</ul>";
+		document.getElementById("prekiddispleja").style.display="none";
+	}
+	else
+	{
+		document.getElementById("oHTMLu").innerHTML="CSS (Cascading Style Sheets) je formaterski jezik koji služi za stilizovanje elemenata HTML web stranice.<br>U ovom tutorijalu obradićemo osnove CSS-a, kao i:<br><ul><li> Osnovne CSS elemente<li> Osnovna CSS svojstva i vrednosti<li> Margine<li> Širinu i visinu elemenata<li> Pozicioniranje<li> Stilizovanje ivica<li> :hover<li> Stilizovanje teksta</ul>";
+		document.getElementById("prekiddispleja").style.display="none";
+	}
+  }
+  function onClickCSS(){
+	document.getElementById("videoiframe").src="https://www.youtube.com/embed/B-o00ROQ1AI";
+	htmlcss=1;
+	if (htmlcss===0)
+	{
+		document.getElementById("oHTMLu").innerHTML="HTML (Hyper Text Markup Language) predstavlja markerski jezik koji se koristi za kreiranje sadržaja veb stranice.<br>Aktuelni HTML standard je HTML 4.01, a telo zaduženo za njegov razvoj je W3 Consortium (link možete pronaći u vidžetu desno)<br>U video tutorijalu iznad možete saznati:<br><ul><li> Osnovnu HTML sintaksu<li> Osnovne HTML tagove<li> Obradu teksta<li> Rad sa slikama<li> Tabele<li> Linkovanje</ul>";
+		document.getElementById("prekiddispleja").style.display="none";
+	}
+	else
+	{
+		document.getElementById("oHTMLu").innerHTML="CSS (Cascading Style Sheets) je formaterski jezik koji služi za stilizovanje elemenata HTML web stranice.<br>U ovom tutorijalu obradićemo osnove CSS-a, kao i:<br><ul><li> Osnovne CSS elemente<li> Osnovna CSS svojstva i vrednosti<li> Margine<li> Širinu i visinu elemenata<li> Pozicioniranje<li> Stilizovanje ivica<li> :hover<li> Stilizovanje teksta</ul>";
+		document.getElementById("prekiddispleja").style.display="none";
+	}
+  }
   function prevediSve(){
   
   if (q%2===0)
@@ -1928,7 +2076,19 @@ function a1Enter() {
 	document.getElementById("prsk").innerHTML="Average grade:";
 	document.getElementById("ensr").innerHTML="EN";
 	document.getElementById("omenitxt").innerHTML="About me";
-	document.getElementById("drugiradtxt").innerHTML="Other projects";
+	document.getElementById("drugiradtxt").innerHTML="Other projects (Blog)";
+	document.getElementById("tdHTML").innerHTML="HTML Basics";
+	document.getElementById("tdCSS").innerHTML="CSS Basics";
+	if (htmlcss===0)
+	{
+		document.getElementById("oHTMLu").innerHTML="HTML (Hyper Text Markup Language) is a markup language used to create content for/and web pages.<br>The current standard is HTML 4.01, and its regulation body is W3 Consortium (link to their website is in a widget to the right)<br>In the video tutorial above you can learn:<br><ul><li> Basic HTML syntax<li> Basic HTML tags<li> Text formatting<li> Image manipulation<li> Tables<li> Linking</ul>";
+		document.getElementById("prekiddispleja").style.display="none";
+	}
+	else
+	{
+		document.getElementById("oHTMLu").innerHTML="CSS (Cascading Style Sheets) is a formatting language used to add styling to elements of an HTML web page.<br>In this tutorial we'll cover the basics of CSS, as well as:<br><ul><li> Basic CSS elements<li> Basic CSS properties and values<li> Margins<li> Element width/height<li> Positioning<li> Border styling<li> :hover<li> Text styling</ul>";
+		document.getElementById("prekiddispleja").style.display="none";
+	}
 	q++;
 	}
 	else if (q%2!==0)
@@ -1941,11 +2101,52 @@ function a1Enter() {
 	document.getElementById("prsk").innerHTML="Prosek:";
 	document.getElementById("ensr").innerHTML="SR";
 	document.getElementById("omenitxt").innerHTML="O meni";
-	document.getElementById("drugiradtxt").innerHTML="Drugi rad";
+	document.getElementById("drugiradtxt").innerHTML="Drugi rad (Blog)";
+	document.getElementById("tdHTML").innerHTML="Osnove HTML-a";
+	document.getElementById("tdCSS").innerHTML="Osnove CSS-a";
+	if (htmlcss===0)
+	{
+		document.getElementById("oHTMLu").innerHTML="HTML (Hyper Text Markup Language) predstavlja markerski jezik koji se koristi za kreiranje sadržaja veb stranice.<br>Aktuelni HTML standard je HTML 4.01, a telo zaduženo za njegov razvoj je W3 Consortium (link možete pronaći u vidžetu desno)<br>U video tutorijalu iznad možete saznati:<br><ul><li> Osnovnu HTML sintaksu<li> Osnovne HTML tagove<li> Obradu teksta<li> Rad sa slikama<li> Tabele<li> Linkovanje</ul>";
+		document.getElementById("prekiddispleja").style.display="none";
+	}
+	else
+	{
+		document.getElementById("oHTMLu").innerHTML="CSS (Cascading Style Sheets) je formaterski jezik koji služi za stilizovanje elemenata HTML web stranice.<br>U ovom tutorijalu obradićemo osnove CSS-a, kao i:<br><ul><li> Osnovne CSS elemente<li> Osnovna CSS svojstva i vrednosti<li> Margine<li> Širinu i visinu elemenata<li> Pozicioniranje<li> Stilizovanje ivica<li> :hover<li> Stilizovanje teksta</ul>";
+		document.getElementById("prekiddispleja").style.display="none";
+	}
 	q++;
 	}
   }
-
+	function popupcontentEnter() {
+  if (i%2===0)
+	{
+	document.getElementById("popupcontent").style.border="1px solid white";
+	}
+  else {document.getElementById("popupcontent").style.border="1px solid black";
+  }
+    }
+  function popupcontentLeave() {
+  document.getElementById("popupcontent").style.border="1px solid rgb(129,130,131)";
+  }
+	function popupcontentbuttonEnter() {
+  if (i%2===0)
+	{
+	document.getElementById("popupcontentbutton").style.border="1px solid white";
+	}
+  else {document.getElementById("popupcontentbutton").style.border="1px solid black";
+  }
+    }
+  function popupcontentbuttonLeave() {
+  document.getElementById("popupcontentbutton").style.border="1px solid rgb(129,130,131)";
+  }
+  function popupcontentOnClick(){
+	document.getElementById("popup").style.display="none";
+	
+	
+  }
+  
+  
+  
 </script>
 </head>
 <body>
@@ -1958,7 +2159,8 @@ function a1Enter() {
 			<div class="dropdown-content">
 				<a class="menua"href="about.html"><span id="omenitxt">O meni</span></a>
 				<a class="menua"href="mainpage.html"><span id="prratext">PRRA</span></a>
-				<a class="menua"href="https://theharoold.github.io/website-projects/" target="-blank"><span id="drugiradtxt">Drugi rad</span></a>
+				<a class="menua"href="https://theharoold.github.io/website-projects/" target="-blank"><span id="drugiradtxt">Drugi rad (Blog)</span></a>
+				<a class="menua"href="https://www.youtube.com/watch?v=qiN9BPFky0c" target="-blank"><span id="odbrana">Video odbrana</span></a>
 			</div>
 		</div>
 		<div id="homebuttonico"><a href="index.html"><img id="homebuttonicopic"src="homebuttonico.png"></a></div>
@@ -1974,6 +2176,34 @@ function a1Enter() {
 		<br>
 		Za tutorijale o HTML-u i CSS-u, odaberite lekciju:
 		</p>
+		<table border="1">
+		<tr>
+			<th onclick="onClickHTML()"class="thbuttons" id="tdHTML">
+			Osnove HTML-a
+			</th>
+			<th onclick="onClickCSS()"class="thbuttons" id="tdCSS">
+			Osnove CSS-a
+			</th>
+		</tr>
+		</table>
+		<div id="videotutorijal">
+			<div id="videotutorijalcontainer">
+				<iframe id="videoiframe"width="70%" height="33%" style="margin-left:15%;"src="https://www.youtube.com/embed/EUGHSEDBWyE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<p id="oHTMLu">
+				HTML (Hyper Text Markup Language) predstavlja markerski jezik koji se koristi za kreiranje sadržaja veb stranice.<br>
+Aktuelni HTML standard je HTML 4.01, a telo zaduženo za njegov razvoj je W3 Consortium (link možete pronaći u vidžetu desno)<br>
+U video tutorijalu iznad možete saznati:<br>
+<ul id="prekiddispleja"> <li id="li6">Osnovnu HTML sintaksu</li>
+<li id="li1"> Osnovne HTML tagove</li>
+<li id="li2"> Obradu teksta</li>
+<li id="li3"> Rad sa slikama</li>
+<li id="li4"> Tabele</li>
+<li id="li5"> Linkovanje</li>
+</ul>
+
+				</p>
+			</div>
+		</div>
 	</div>
 	<div id="centraldiv-widget1" onmouseenter="myFunction4()" onmouseleave="myFunction5()">
 		<p id="widget1links">
@@ -2055,5 +2285,7 @@ function a1Enter() {
 <footer id="footerbottom">
 <p id="footerbottomp">Veljko Lončarević | 2020 &copy </p><p onclick="myFunction3()" id="footerbottompx">x</p>
 </footer>
+
+
 </body>
 </html>
